@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 
 import UserDataForm from "./UserDataForm";
 import "./style/Conversation.scss";
+import sendDataToFirebase from "./FirebaseSender";
 
 const Conversation = ({ messages }) => {
   const messageEndRef = React.useRef(null);
 
   React.useEffect(() => {
-    // sendDataToFirebase();
+    sendDataToFirebase();
     messageEndRef.current.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 

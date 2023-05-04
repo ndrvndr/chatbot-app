@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import "./style/TypingStatus.scss";
+
 const TypingStatus = ({ isTyping, isInputFocused }) => {
   return (
     <div
@@ -7,7 +9,7 @@ const TypingStatus = ({ isTyping, isInputFocused }) => {
         isTyping && isInputFocused ? "typing__status--active" : ""
       }`}
     >
-      <span>mengetik</span>
+      <span className="text-sm">mengetik</span>
       <div className="typing__dot--group">
         <span className="typing__dot"></span>
         <span className="typing__dot"></span>

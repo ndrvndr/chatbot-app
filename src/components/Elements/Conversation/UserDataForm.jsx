@@ -2,7 +2,7 @@ import clsx from "clsx";
 import swal from "sweetalert";
 import { v4 as uuidv4 } from "uuid";
 import { useFormik } from "formik";
-import Schema from "./config/schema";
+import Schema from "./schema/schema";
 
 const UserDataForm = () => {
   const handleFormSubmit = (values) => {

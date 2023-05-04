@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 import Icon from "../Icon";
 import UversTeam from "./UversTeam";
 import OnlineStatus from "./OnlineStatus";
-// import TypingStatus from "./TypingStatus";
+import TypingStatus from "./TypingStatus";
 import CloseButton from "./CloseButton";
 
-const HeaderApp = ({ toggleContent }) => {
+const HeaderApp = ({ toggleContent, isTyping, isInputFocused }) => {
   return (
     <div
       className={clsx(
@@ -24,8 +24,8 @@ const HeaderApp = ({ toggleContent }) => {
 
         <div className="flex flex-col text-white">
           <UversTeam />
-          <OnlineStatus />
-          {/* <TypingStatus /> */}
+          <OnlineStatus isInputFocused={isInputFocused} />
+          <TypingStatus isTyping={isTyping} isInputFocused={isInputFocused} />
         </div>
       </div>
       <CloseButton toggleContent={toggleContent} />
@@ -35,6 +35,8 @@ const HeaderApp = ({ toggleContent }) => {
 
 HeaderApp.propTypes = {
   toggleContent: PropTypes.func.isRequired,
+  isTyping: PropTypes.bool.isRequired,
+  isInputFocused: PropTypes.bool.isRequired,
 };
 
 export default HeaderApp;

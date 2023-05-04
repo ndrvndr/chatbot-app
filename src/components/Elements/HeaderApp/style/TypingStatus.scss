@@ -1,0 +1,43 @@
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes bulge {
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.typing__status {
+  display: none;
+  margin-top: 8px;
+  height: 20px;
+
+  span {
+    font-size: 14px;
+  }
+
+  .typing__dot--group {
+    display: flex;
+    height: fit-content;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    align-self: flex-end;
+
+    .typing__dot {
+      height: 5px;
+      width: 5px;
+      margin: 0 1px;
+      background-color: #fff;
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: 1s blink infinite;
+    }
+  }
+}
+
+.typing__status--active {
+  display: flex;
+}
