@@ -10,8 +10,8 @@ const ToggleButton = ({ isContentActive, toggleContent }) => {
         "rounded-[100%] border-[none] cursor-pointer p-3 ",
         "bg-[#0e74bd] hover:bg-[#064a7a]",
         "transition-all duration-[1s]",
-        "min-w-[449px]:block",
-        isContentActive ? "hidden" : "block"
+        isContentActive ? "hidden" : "block",
+        "min-[449px]:block"
       )}
       onClick={() => toggleContent()}
     >
