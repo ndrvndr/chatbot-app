@@ -1,0 +1,52 @@
+$color_1: #fff;
+$font-family_1: inherit;
+
+.App-main {
+  padding: 20px 20px;
+  flex-grow: 1;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #0e74bd;
+    border-radius: 15px;
+  }
+  &::-webkit-scrollbar-corner {
+    border-radius: 15px;
+  }
+}
+
+.messages__content {
+  border-radius: 20px 20px 0px 0px;
+  width: fit-content;
+  max-width: 70%;
+  padding: 10px;
+  background: $color_1;
+}
+
+.messages__content--user {
+  background: #e0e0e0;
+  color: #000;
+  margin-left: auto;
+  text-align: right;
+  border-bottom-left-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  p {
+    background: #e0e0e0;
+  }
+}
+
+.messages__content--bot {
+  background: #0e74bd;
+  color: $color_1;
+  margin-right: auto;
+  text-align: left;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 20px;
+  p {
+    background: #0e74bd;
+  }
+}

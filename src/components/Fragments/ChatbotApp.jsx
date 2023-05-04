@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 import ToggleButton from "../Elements/ToggleButton";
 import HeaderApp from "../Elements/HeaderApp";
-// import Conversation from "../Elements/Conversation";
+import Conversation from "../Elements/Conversation";
 import Input from "../Elements/Input";
 
 const ChatbotApp = () => {
@@ -47,7 +47,7 @@ const ChatbotApp = () => {
           isTyping={isTyping}
           isInputFocused={isInputFocused}
         />
-        {/* <Conversation messages={messages} /> */}
+        <Conversation messages={messages} />
         <Input
           handleInputFocus={handleInputFocus}
           handleSetMessages={handleSetMessages}

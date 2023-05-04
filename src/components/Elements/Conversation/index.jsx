@@ -1,8 +1,8 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
-// import UserDataForm from "./conversation-components/UserDataForm";
-// import sendDataToFirebase from "./FirebaseSender";
+import UserDataForm from "./UserDataForm";
+import "./style/Conversation.scss";
 
 const Conversation = ({ messages }) => {
   const messageEndRef = React.useRef(null);
@@ -14,7 +14,7 @@ const Conversation = ({ messages }) => {
 
   return (
     <div className="App-main">
-      {/* <UserDataForm /> */}
+      <UserDataForm />
       <MessageList
         messages={messages}
         render={(message, index) => {
@@ -55,7 +55,12 @@ const MessageList = ({ messages, render }) => {
 };
 
 Conversation.propTypes = {
-  message: PropTypes.object,
+  messages: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+MessageList.propTypes = {
+  messages: PropTypes.arrayOf(PropTypes.object).isRequired,
+  render: PropTypes.func.isRequired,
 };
 
 export default Conversation;
