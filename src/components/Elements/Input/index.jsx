@@ -37,7 +37,7 @@ const Input = ({ handleInputFocus, handleSetMessages }) => {
     if (handleInputValidation() && userInput.trim() !== "") {
       const msg1 = { name: "Kamu", message: userInput };
 
-      fetch("http://127.0.0.1:5000/request", {
+      fetch(import.meta.env.VITE_ENDPOINT, {
         method: "POST",
         body: JSON.stringify({ message: userInput }),
         mode: "cors",

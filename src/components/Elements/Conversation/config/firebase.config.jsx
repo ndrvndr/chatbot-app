@@ -2,15 +2,14 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAYUGQUNc87scY_aLah_wz2XghQzLNHy1g",
-  authDomain: "chatbot-app-cd8a4.firebaseapp.com",
-  databaseURL:
-    "https://chatbot-app-cd8a4-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "chatbot-app-cd8a4",
-  storageBucket: "chatbot-app-cd8a4.appspot.com",
-  messagingSenderId: "1076241094167",
-  appId: "1:1076241094167:web:d19730aa27ed07cb33ee52",
-  measurementId: "G-RZFM19EEG1",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_APP_DATABASE_URL,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 firebase.initializeApp(firebaseConfig);
