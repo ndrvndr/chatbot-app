@@ -119,7 +119,7 @@ const UserDataForm = () => {
             className={clsx(
               "rounded-3xl border-0 px-4 py-2.5 ",
               "bg-[#0e74bd] text-white hover:bg-[#064a7a]",
-              "font-Bold cursor-pointer",
+              "cursor-pointer font-bold",
               "transition-[background-color] duration-[0.3s] ease-[ease]"
             )}
           >
