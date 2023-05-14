@@ -33,12 +33,12 @@ const ChatbotApp = () => {
     <>
       <div
         className={clsx(
-          "fixed right-0 bottom-0",
+          "fixed bottom-0 right-0",
           "flex flex-col justify-between",
-          "w-full h-full max-w-md",
+          "h-full w-full max-w-md",
           "bg-white",
-          "transition-all ease duration-[0.5s]",
-          "min-[449px]:max-w-[400px] min-[449px]:h-[630px] min-[449px]:right-11 min-[449px]:bottom-[170px] min-[449px]:rounded-xl",
+          "ease transition-all duration-[0.5s]",
+          "min-[449px]:bottom-[170px] min-[449px]:right-11 min-[449px]:h-[630px] min-[449px]:max-w-[400px] min-[449px]:rounded-xl",
           isContentActive ? "opacity-1" : "opacity-0"
         )}
       >

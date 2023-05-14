@@ -7,7 +7,7 @@ const ToggleButton = ({ isContentActive, toggleContent }) => {
   return (
     <div
       className={clsx(
-        "fixed right-3 bottom-3 ",
+        "fixed bottom-3 right-3 ",
         // "rounded-[100%] border-[none] cursor-pointer p-3 ",
         // "bg-[#0e74bd] hover:bg-[#064a7a]",
         "transition-all duration-[1s]",

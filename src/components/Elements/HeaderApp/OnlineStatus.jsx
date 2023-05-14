@@ -6,7 +6,7 @@ const OnlineStatus = ({ isInputFocused }) => {
   return (
     <div className={`${isInputFocused ? "hidden" : "flex"} mt-2`}>
       <img src={OnlineStatusIcon} alt="Online Status Icon" />
-      <span className="text-sm ml-1">Terhubung</span>
+      <span className="ml-1 text-sm">Terhubung</span>
     </div>
   );
 };

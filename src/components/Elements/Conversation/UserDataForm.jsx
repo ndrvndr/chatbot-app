@@ -33,9 +33,9 @@ const UserDataForm = () => {
   });
 
   return (
-    <div className="w-full max-w-xs mx-auto my-5 rounded-2xl bg-[#f1f7fe]">
+    <div className="mx-auto my-5 w-full max-w-xs rounded-2xl bg-[#f1f7fe]">
       <form
-        className="relative flex flex-col gap-4 text-center pt-8 pb-6 px-6"
+        className="relative flex flex-col gap-4 px-6 pb-6 pt-8 text-center"
         onSubmit={(e) => {
           e.preventDefault();
           handleSubmit(e);
@@ -45,7 +45,7 @@ const UserDataForm = () => {
           Kami mengingatkan Anda bahwa percakapan ini direkam dan akan digunakan
           untuk tujuan pengawasan dan peningkatan layanan
         </span>
-        <div className="bg-transparent w-full mt-4 mb-2 mx-0 rounded-lg space-y-1">
+        <div className="mx-0 mb-2 mt-4 w-full space-y-1 rounded-lg bg-transparent">
           <input
             type="text"
             readOnly={values.isSubmit}
@@ -53,8 +53,8 @@ const UserDataForm = () => {
             value={values.name}
             className={
               errors.name
-                ? "h-10 w-full text-sm p-3 border border-red-600 outline-none"
-                : "h-10 w-full text-sm p-3 outline-none"
+                ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
+                : "h-10 w-full p-3 text-sm outline-none"
             }
             placeholder="Nama Lengkap"
             onChange={handleChange}
@@ -62,7 +62,7 @@ const UserDataForm = () => {
             required
           />
           {errors.name && (
-            <p className="text-right text-xs font-medium ml-3 text-red-500">
+            <p className="ml-3 text-right text-xs font-medium text-red-500">
               {errors.name}
             </p>
           )}
@@ -73,8 +73,8 @@ const UserDataForm = () => {
             value={values.email}
             className={
               errors.email
-                ? "h-10 w-full text-sm p-3 border border-red-600 outline-none"
-                : "h-10 w-full text-sm p-3 outline-none"
+                ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
+                : "h-10 w-full p-3 text-sm outline-none"
             }
             placeholder="Email"
             onChange={handleChange}
@@ -82,7 +82,7 @@ const UserDataForm = () => {
             required
           />
           {errors.email && (
-            <p className="text-right text-xs font-medium ml-3 text-red-500">
+            <p className="ml-3 text-right text-xs font-medium text-red-500">
               {errors.email}
             </p>
           )}
@@ -93,8 +93,8 @@ const UserDataForm = () => {
             value={values.phoneNumber}
             className={
               errors.phoneNumber
-                ? "h-10 w-full text-sm p-3 border border-red-600 outline-none"
-                : "h-10 w-full text-sm p-3 outline-none"
+                ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
+                : "h-10 w-full p-3 text-sm outline-none"
             }
             placeholder="Nomor Telepon"
             onChange={handleChange}
@@ -102,7 +102,7 @@ const UserDataForm = () => {
             required
           />
           {errors.phoneNumber && (
-            <p className="text-right text-xs ml-3 text-red-500">
+            <p className="ml-3 text-right text-xs text-red-500">
               {errors.phoneNumber}
             </p>
           )}
@@ -117,9 +117,9 @@ const UserDataForm = () => {
             type="submit"
             disabled={values.isSubmit}
             className={clsx(
-              "px-4 py-2.5 rounded-3xl border-0 ",
+              "rounded-3xl border-0 px-4 py-2.5 ",
               "bg-[#0e74bd] text-white hover:bg-[#064a7a]",
-              "font-[NotoSans-Bold] cursor-pointer",
+              "cursor-pointer font-[NotoSans-Bold]",
               "transition-[background-color] duration-[0.3s] ease-[ease]"
             )}
           >

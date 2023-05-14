@@ -14,11 +14,11 @@ const HeaderApp = ({ toggleContent, isTyping, isInputFocused }) => {
         "flex items-center justify-around",
         "h-[100px] min-h-[100px]",
         "bg-[#0e74bd]",
-        " min-[449px]:rounded-t-xl min-[449px]:justify-start"
+        " min-[449px]:justify-start min-[449px]:rounded-t-xl"
       )}
     >
       <div className="flex min-[449px]:ml-[40px]">
-        <div className="mr-5 my-auto rounded-[100%] border-[none] bg-[#0e74bd] ">
+        <div className="my-auto mr-5 rounded-[100%] border-[none] bg-[#0e74bd] ">
           <Icon />
         </div>
 

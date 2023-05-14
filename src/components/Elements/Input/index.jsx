@@ -70,11 +70,11 @@ const Input = ({ handleInputFocus, handleSetMessages }) => {
   };
 
   return (
-    <div className="h-[100px] min-h-[100px] flex flex-col items-center">
+    <div className="flex h-[100px] min-h-[100px] flex-col items-center">
       <hr className="w-[350px] border border-solid border-[#e0e0e0]" />
-      <div className="flex w-full justify-around my-auto">
+      <div className="my-auto flex w-full justify-around">
         <input
-          className="border-[none] outline-none text-sm"
+          className="border-[none] text-sm outline-none"
           type="text"
           placeholder="Tulis pesan Anda..."
           onClick={handleInputClick}
