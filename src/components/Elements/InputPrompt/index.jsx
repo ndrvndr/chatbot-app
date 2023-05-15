@@ -1,9 +1,10 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import swal from "sweetalert";
 
 import SendButton from "./SendButton";
-import "./style/SendButton.scss";
+import InputPrompt from "./InputPrompt";
+import MyModal from "../Dialog";
+import { HiOutlineExclamation } from "react-icons/hi";
 
 const Input = ({ handleInputFocus, handleSetMessages }) => {
   const [messages, setMessages] = React.useState(
@@ -17,13 +18,19 @@ const Input = ({ handleInputFocus, handleSetMessages }) => {
 
   const userData = JSON.parse(localStorage.getItem("User Data Form"));
 
+  let [isOpen, setIsOpen] = React.useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
   const handleInputValidation = () => {
     if (userData === null) {
-      swal(
-        "Ooops",
-        "Isi formulir nama, email, dan nomor telepon dahulu!",
-        "warning"
-      );
+      openModal();
       return false;
     }
     return true;
@@ -70,24 +77,33 @@ const Input = ({ handleInputFocus, handleSetMessages }) => {
   };
 
   return (
-    <div className="flex h-[100px] min-h-[100px] flex-col items-center">
-      <hr className="w-[350px] border border-solid border-[#e0e0e0]" />
-      <div className="my-auto flex w-full justify-around">
-        <input
-          className="border-[none] text-sm outline-none"
-          type="text"
-          placeholder="Tulis pesan Anda..."
-          onClick={handleInputClick}
-          onFocus={() => handleInputFocus(true)}
-          onBlur={() => handleInputFocus(false)}
-          value={userInput}
-          onChange={handleChange}
-          onKeyUp={handleKeyPress}
-          readOnly={userData === null}
-        />
-        <SendButton handleSubmit={handleSubmit} />
+    <>
+      <div className="flex h-[100px] min-h-[100px] flex-col items-center">
+        <hr className="w-[350px] border border-solid border-[#e0e0e0]" />
+        <div className="my-auto flex w-full justify-around">
+          <InputPrompt
+            handleInputClick={handleInputClick}
+            handleInputFocus={handleInputFocus}
+            userInput={userInput}
+            handleChange={handleChange}
+            handleKeyPress={handleKeyPress}
+            userData={userData}
+          />
+          <SendButton handleSubmit={handleSubmit} />
+        </div>
       </div>
-    </div>
+      <MyModal
+        isOpen={isOpen}
+        closeModal={closeModal}
+        dialogTitle="Ooops"
+        dialogDesc="Mohon berikan nama, email, dan nomor telepon Anda"
+        dialogButton="Sure"
+        bgColor="bg-yellow-100"
+        buttonColor="bg-blue-100"
+        icon={HiOutlineExclamation}
+        iconColor="orange"
+      />
+    </>
   );
 };
 

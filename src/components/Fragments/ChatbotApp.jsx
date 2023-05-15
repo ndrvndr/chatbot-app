@@ -4,7 +4,7 @@ import clsx from "clsx";
 import ToggleButton from "../Elements/ToggleButton";
 import HeaderApp from "../Elements/HeaderApp";
 import Conversation from "../Elements/Conversation";
-import Input from "../Elements/Input";
+import InputPrompt from "../Elements/InputPrompt";
 
 const ChatbotApp = () => {
   const [isContentActive, setIsContentActive] = React.useState(false);
@@ -48,7 +48,7 @@ const ChatbotApp = () => {
           isInputFocused={isInputFocused}
         />
         <Conversation messages={messages} />
-        <Input
+        <InputPrompt
           handleInputFocus={handleInputFocus}
           handleSetMessages={handleSetMessages}
         />

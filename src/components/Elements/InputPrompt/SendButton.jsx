@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./style/SendButton.scss";
 
 const SendButton = ({ handleSubmit }) => {
   return (
