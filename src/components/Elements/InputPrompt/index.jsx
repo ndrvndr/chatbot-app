@@ -99,7 +99,7 @@ const Input = ({ handleInputFocus, handleSetMessages }) => {
         dialogDesc="Mohon berikan nama, email, dan nomor telepon Anda"
         dialogButton="Sure"
         bgColor="bg-yellow-100"
-        buttonColor="bg-blue-100"
+        buttonColor="bg-[#0e74bd]"
         icon={HiOutlineExclamation}
         iconColor="orange"
       />

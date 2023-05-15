@@ -148,7 +148,7 @@ const UserDataForm = () => {
         dialogDesc="Formulir Anda telah berhasil dikirim. Terima kasih telah meluangkan waktu untuk mengisi formulir."
         dialogButton="Hurray"
         bgColor="bg-green-100"
-        buttonColor="bg-blue-100"
+        buttonColor="bg-[#0e74bd]"
         icon={HiOutlineCheck}
         iconColor="green"
       />

@@ -60,10 +60,10 @@ export default function MyModal(props) {
                   <p className="text-sm text-gray-500">{dialogDesc}</p>
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-5 flex justify-end">
                   <button
                     type="button"
-                    className={`text-black-900 inline-flex justify-center rounded-md border border-transparent ${buttonColor} px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2`}
+                    className={`inline-flex justify-center rounded-md border border-transparent font-medium text-white ${buttonColor} px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2`}
                     onClick={closeModal}
                   >
                     {dialogButton}
