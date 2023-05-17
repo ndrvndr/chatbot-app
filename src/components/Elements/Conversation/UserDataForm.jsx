@@ -58,18 +58,18 @@ const UserDataForm = (props) => {
         >
           <span className="text-sm">
             Kami mengingatkan Anda bahwa percakapan ini direkam dan akan
-            digunakan untuk tujuan pengawasan dan peningkatan layanan
+            digunakan untuk tujuan pengawasan dan peningkatan layanan.
           </span>
           <div className="mx-0 mb-2 mt-4 w-full space-y-1 rounded-lg bg-transparent">
             <input
               type="text"
-              readOnly={values.isSubmit}
+              disabled={values.isSubmit}
               name="name"
               value={values.name}
               className={
                 errors.name
                   ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
-                  : "h-10 w-full p-3 text-sm outline-none"
+                  : "h-10 w-full bg-white p-3 text-sm outline-none"
               }
               placeholder="Nama Lengkap"
               onChange={handleChange}
@@ -87,13 +87,13 @@ const UserDataForm = (props) => {
             )}
             <input
               type="email"
-              readOnly={values.isSubmit}
+              disabled={values.isSubmit}
               name="email"
               value={values.email}
               className={
                 errors.email
                   ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
-                  : "h-10 w-full p-3 text-sm outline-none"
+                  : "h-10 w-full bg-white p-3 text-sm outline-none"
               }
               placeholder="Email"
               onChange={handleChange}
@@ -111,13 +111,13 @@ const UserDataForm = (props) => {
             )}
             <input
               type="tel"
-              readOnly={values.isSubmit}
+              disabled={values.isSubmit}
               name="phoneNumber"
               value={values.phoneNumber}
               className={
                 errors.phoneNumber
                   ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
-                  : "h-10 w-full p-3 text-sm outline-none"
+                  : "h-10 w-full bg-white p-3 text-sm outline-none"
               }
               placeholder="Nomor Telepon"
               onChange={handleChange}
@@ -136,8 +136,9 @@ const UserDataForm = (props) => {
           </div>
           {storedData ? (
             <span className="text-sm">
-              Terima kasih telah mengirimkan formulir, ini akan membantu kami
-              memahami kebutuhan Anda dan memberikan layanan yang lebih baik.
+              Terima kasih telah mengirimkan formulir. Formulir akan membantu
+              kami memahami kebutuhan Anda dan memberikan layanan yang lebih
+              baik.
             </span>
           ) : (
             <button
