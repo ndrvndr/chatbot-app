@@ -6,10 +6,10 @@ const ToggleButton = ({ isContentActive, toggleContent }) => {
   return (
     <div
       className={clsx(
-        "fixed bottom-3 right-3 ",
+        "absolute bottom-3 right-3",
         "transition-all duration-[1s]",
         isContentActive ? "hidden" : "block",
-        "min-[449px]:block"
+        "min-[449px]:bottom-0 min-[449px]:right-0 min-[449px]:block"
       )}
       onClick={() => toggleContent()}
     >
