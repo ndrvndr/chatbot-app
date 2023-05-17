@@ -16,8 +16,16 @@ const InputPrompt = (props) => {
         type="text"
         placeholder="Tulis pesan Anda..."
         onClick={handleInputClick}
-        onFocus={() => handleInputFocus(true)}
-        onBlur={() => handleInputFocus(false)}
+        onFocus={() => {
+          if (userData !== null) {
+            handleInputFocus(true);
+          }
+        }}
+        onBlur={() => {
+          if (userData !== null) {
+            handleInputFocus(false);
+          }
+        }}
         value={userInput}
         onChange={handleChange}
         onKeyUp={handleKeyPress}
