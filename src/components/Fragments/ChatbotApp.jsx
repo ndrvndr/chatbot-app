@@ -47,7 +47,7 @@ const ChatbotApp = () => {
           isTyping={isTyping}
           isInputFocused={isInputFocused}
         />
-        <Conversation messages={messages} />
+        <Conversation messages={messages} handleInputFocus={handleInputFocus} />
         <InputPrompt
           handleInputFocus={handleInputFocus}
           handleSetMessages={handleSetMessages}

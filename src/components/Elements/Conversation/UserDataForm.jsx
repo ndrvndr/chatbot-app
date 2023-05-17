@@ -1,4 +1,5 @@
 import * as React from "react";
+import PropTypes from "prop-types";
 import clsx from "clsx";
 import { v4 as uuidv4 } from "uuid";
 import { useFormik } from "formik";
@@ -6,7 +7,8 @@ import Schema from "./schema/schema";
 import MyModal from "../Dialog";
 import { HiOutlineCheck } from "react-icons/hi";
 
-const UserDataForm = () => {
+const UserDataForm = (props) => {
+  const { handleInputFocus } = props;
   let [isOpen, setIsOpen] = React.useState(false);
 
   function closeModal() {
@@ -71,7 +73,11 @@ const UserDataForm = () => {
               }
               placeholder="Nama Lengkap"
               onChange={handleChange}
-              onBlur={handleblur}
+              onFocus={() => handleInputFocus(true)}
+              onBlur={() => {
+                handleblur;
+                handleInputFocus(false);
+              }}
               required
             />
             {errors.name && (
@@ -91,7 +97,11 @@ const UserDataForm = () => {
               }
               placeholder="Email"
               onChange={handleChange}
-              onBlur={handleblur}
+              onFocus={() => handleInputFocus(true)}
+              onBlur={() => {
+                handleblur;
+                handleInputFocus(false);
+              }}
               required
             />
             {errors.email && (
@@ -111,7 +121,11 @@ const UserDataForm = () => {
               }
               placeholder="Nomor Telepon"
               onChange={handleChange}
-              onBlur={handleblur}
+              onFocus={() => handleInputFocus(true)}
+              onBlur={() => {
+                handleblur;
+                handleInputFocus(false);
+              }}
               required
             />
             {errors.phoneNumber && (
@@ -154,6 +168,10 @@ const UserDataForm = () => {
       />
     </>
   );
+};
+
+UserDataForm.propTypes = {
+  handleInputFocus: PropTypes.func.isRequired,
 };
 
 export default UserDataForm;

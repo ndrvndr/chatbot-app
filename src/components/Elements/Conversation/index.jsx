@@ -5,7 +5,7 @@ import UserDataForm from "./UserDataForm";
 import "./style/Conversation.scss";
 import sendDataToFirebase from "./FirebaseSender";
 
-const Conversation = ({ messages }) => {
+const Conversation = ({ messages, handleInputFocus }) => {
   const messageEndRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -15,7 +15,7 @@ const Conversation = ({ messages }) => {
 
   return (
     <div className="App-main">
-      <UserDataForm />
+      <UserDataForm handleInputFocus={handleInputFocus} />
       <MessageList
         messages={messages}
         render={(message, index) => {
@@ -57,6 +57,7 @@ const MessageList = ({ messages, render }) => {
 
 Conversation.propTypes = {
   messages: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleInputFocus: PropTypes.func.isRequired,
 };
 
 MessageList.propTypes = {
