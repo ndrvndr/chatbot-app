@@ -1,13 +1,10 @@
-
 # Standalone Frontend Chatbot App
 
-The project aims to create a standalone frontend chatbot app and connect it to a Python Flask backend via REST API for users to interact with the chatbot. The frontend will use Vite, React, HTML, CSS, and Tailwind CSS technologies. Users can ask questions and receive responses asynchronously without the need for page refresh. Additional features can be added to the chatbot based on needs. The backend of this project utilizes Python Flask to create a REST API endpoint, which can be found in this [repository](https://github.com/ndrvndr/chatbot-endpoint). 
-
+The project aims to create a standalone frontend chatbot app and connect it to a Python Flask backend via REST API for users to interact with the chatbot. The frontend will use Vite, React, HTML, CSS, and Tailwind CSS technologies. Users can ask questions and receive responses asynchronously without the need for page refresh. Additional features can be added to the chatbot based on needs. The backend of this project utilizes Python Flask to create a REST API endpoint, which can be found in this [repository](https://github.com/ndrvndr/chatbot-endpoint).
 
 ## Demo
 
-The live site can be accessed [here](https://chatbot-app-pink.vercel.app/)
-
+The live site can be accessed [here]()
 
 ## Run Locally
 
@@ -35,7 +32,6 @@ Start the server
 ```bash
   npm run dev
 ```
-
 
 ## Environment Variables
 
@@ -69,19 +65,18 @@ Those environment variables are part of the Firebase configuration.
 
 **Server:** Python, Flask
 
-
 ## Attribution
+
 The typing status component was built using code from https://github.com/hitchcliff/front-end-chatjs to get the typing animation effect.
 
 Send button and forms use components from [uiverse.io](https://uiverse.io/) | [Send Button](https://uiverse.io/adamgiebl/smart-moth-68) | [Forms](https://uiverse.io/alexruix/tender-badger-50)
 
 Dialog components created using [headlessui.com](https://headlessui.com/react/dialog) and design inspired by [Aether Design System](https://aether.thcl.dev/). See the repository [here](https://github.com/theodorusclarence/aether-design-system)
+
 ## Authors
 
 - [@ndrvndr](https://github.com/ndrvndr)
 
-
 ## Feedback
 
 If you have any feedback, please contact me at andreavindra37@gmail.com
-
