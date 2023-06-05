@@ -38,7 +38,7 @@ const ChatbotApp = () => {
           "h-full w-full max-w-md",
           "bg-white",
           "ease transition-all duration-[0.5s]",
-          "min-[449px]:bottom-[150px] min-[449px]:right-8 min-[449px]:h-[630px] min-[449px]:max-w-[400px] min-[449px]:rounded-xl",
+          "min-[449px]:bottom-[70px] min-[449px]:right-6 min-[449px]:h-[630px] min-[449px]:max-w-[400px] min-[449px]:rounded-xl",
           isContentActive ? "opacity-1" : "opacity-0"
         )}
       >

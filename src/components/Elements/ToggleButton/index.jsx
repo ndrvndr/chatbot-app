@@ -1,19 +1,21 @@
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import cs_illustration from "../../../assets/cs_illustration.svg";
+import ic_cs from "../../../assets/ic_cs.svg";
 
 const ToggleButton = ({ isContentActive, toggleContent }) => {
   return (
     <div
       className={clsx(
         "absolute bottom-3 right-3",
+        "cursor-pointer rounded-[100%] border-[none] p-3",
+        "bg-[#0e74bd] hover:bg-[#064a7a]",
         "transition-all duration-[1s]",
         isContentActive ? "hidden" : "block",
         "min-[449px]:bottom-0 min-[449px]:right-0 min-[449px]:block"
       )}
       onClick={() => toggleContent()}
     >
-      <img src={cs_illustration} alt="Uvers Customer Service Illustration" />
+      <img src={ic_cs} alt='Icon Customer Service' />
     </div>
   );
 };
