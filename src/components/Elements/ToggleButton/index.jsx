@@ -15,7 +15,7 @@ const ToggleButton = ({ isContentActive, toggleContent }) => {
       )}
       onClick={() => toggleContent()}
     >
-      <img src={ic_cs} alt='Icon Customer Service' />
+      <img src={ic_cs} alt='Icon Customer Service' className='h-9 w-9' />
     </div>
   );
 };
