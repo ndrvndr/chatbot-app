@@ -12,9 +12,9 @@ const HeaderApp = ({ toggleContent, isTyping, isInputFocused }) => {
     <div
       className={clsx(
         "flex items-center justify-around",
-        "h-[100px] min-h-[100px]",
+        "h-[100px] min-h-[100px] p-5",
         "bg-[#0e74bd]",
-        " min-[449px]:justify-start min-[449px]:rounded-t-xl"
+        " min-[449px]:justify-start min-[449px]:rounded-t-xl min-[449px]:p-0"
       )}
     >
       <div className='flex min-[449px]:ml-[40px]'>
@@ -22,7 +22,7 @@ const HeaderApp = ({ toggleContent, isTyping, isInputFocused }) => {
           <FcCustomerSupport fontSize='2.7em' />
         </div>
 
-        <div className='flex flex-col text-white'>
+        <div className='flex w-[132px] flex-col text-white'>
           <UversTeam />
           <OnlineStatus isInputFocused={isInputFocused} />
           <TypingStatus isTyping={isTyping} isInputFocused={isInputFocused} />
