@@ -1,12 +1,14 @@
 import PropTypes from "prop-types";
 
-import OnlineStatusIcon from "../../../assets/ic_online.svg";
+import { HiStatusOnline } from "react-icons/hi";
 
 const OnlineStatus = ({ isInputFocused }) => {
   return (
-    <div className={`${isInputFocused ? "hidden" : "flex"} mt-2`}>
-      <img src={OnlineStatusIcon} alt="Online Status Icon" />
-      <span className="ml-1 text-sm">Terhubung</span>
+    <div
+      className={`${isInputFocused ? "hidden" : "flex"} mt-2 flex items-center`}
+    >
+      <HiStatusOnline color='#4ECE3D' />
+      <span className='ml-1 text-sm'>Terhubung</span>
     </div>
   );
 };

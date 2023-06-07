@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 
-import CloseIcon from "../../../assets/ic_close.svg";
+import { RiCloseLine } from "react-icons/ri";
 
 const CloseButton = ({ toggleContent }) => {
   return (
     <div
-      className="ml-[70px] cursor-pointer min-[449px]:hidden"
+      className='ml-[70px] cursor-pointer min-[449px]:hidden'
       onClick={() => toggleContent()}
     >
-      <img src={CloseIcon} alt="Close Icon" />
+      <RiCloseLine color='#fff' fontSize='2.6em' />
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import clsx from "clsx";
 import PropTypes from "prop-types";
 
-import Icon from "./Icon";
 import UversTeam from "./UversTeam";
 import OnlineStatus from "./OnlineStatus";
 import TypingStatus from "./TypingStatus";
 import CloseButton from "./CloseButton";
+import { FcCustomerSupport } from "react-icons/fc";
 
 const HeaderApp = ({ toggleContent, isTyping, isInputFocused }) => {
   return (
@@ -17,12 +17,12 @@ const HeaderApp = ({ toggleContent, isTyping, isInputFocused }) => {
         " min-[449px]:justify-start min-[449px]:rounded-t-xl"
       )}
     >
-      <div className="flex min-[449px]:ml-[40px]">
-        <div className="my-auto mr-5 rounded-[100%] border-[none] bg-[#0e74bd] ">
-          <Icon />
+      <div className='flex min-[449px]:ml-[40px]'>
+        <div className='my-auto mr-5 rounded-[100%] border-[none] bg-[#0e74bd] '>
+          <FcCustomerSupport fontSize='2.7em' />
         </div>
 
-        <div className="flex flex-col text-white">
+        <div className='flex flex-col text-white'>
           <UversTeam />
           <OnlineStatus isInputFocused={isInputFocused} />
           <TypingStatus isTyping={isTyping} isInputFocused={isInputFocused} />
