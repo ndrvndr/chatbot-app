@@ -6,7 +6,7 @@ import InputPrompt from "./InputPrompt";
 import MyModal from "../Dialog";
 import { HiOutlineExclamation } from "react-icons/hi";
 
-const Input = ({ handleInputFocus, handleSetMessages }) => {
+const Input = ({ handleInputFocus, handleSetMessages, userDataStore }) => {
   const [messages, setMessages] = React.useState(
     JSON.parse(localStorage.getItem("Conversation History")) || []
   );
@@ -16,7 +16,7 @@ const Input = ({ handleInputFocus, handleSetMessages }) => {
     setUserInput(event.target.value);
   };
 
-  const userData = JSON.parse(localStorage.getItem("User Data Form"));
+  const userData = userDataStore;
 
   let [isOpen, setIsOpen] = React.useState(false);
 
@@ -78,9 +78,9 @@ const Input = ({ handleInputFocus, handleSetMessages }) => {
 
   return (
     <>
-      <div className="flex h-[100px] min-h-[100px] flex-col items-center">
-        <hr className="w-[350px] border border-solid border-[#e0e0e0]" />
-        <div className="my-auto flex w-full justify-around">
+      <div className='flex h-[100px] min-h-[100px] flex-col items-center'>
+        <hr className='w-[350px] border border-solid border-[#e0e0e0]' />
+        <div className='my-auto flex w-full justify-around'>
           <InputPrompt
             handleInputClick={handleInputClick}
             handleInputFocus={handleInputFocus}
@@ -95,13 +95,13 @@ const Input = ({ handleInputFocus, handleSetMessages }) => {
       <MyModal
         isOpen={isOpen}
         closeModal={closeModal}
-        dialogTitle="Ooops"
-        dialogDesc="Mohon berikan nama, email, dan nomor telepon Anda"
-        dialogButton="Sure"
-        bgColor="bg-yellow-100"
-        buttonColor="bg-[#0e74bd]"
+        dialogTitle='Ooops'
+        dialogDesc='Mohon berikan nama, email, dan nomor telepon Anda'
+        dialogButton='Sure'
+        bgColor='bg-yellow-100'
+        buttonColor='bg-[#0e74bd]'
         icon={HiOutlineExclamation}
-        iconColor="orange"
+        iconColor='orange'
       />
     </>
   );
@@ -110,6 +110,7 @@ const Input = ({ handleInputFocus, handleSetMessages }) => {
 Input.propTypes = {
   handleInputFocus: PropTypes.func.isRequired,
   handleSetMessages: PropTypes.func.isRequired,
+  userDataStore: PropTypes.object,
 };
 
 export default Input;

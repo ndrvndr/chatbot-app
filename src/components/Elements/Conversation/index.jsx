@@ -5,7 +5,7 @@ import UserDataForm from "./UserDataForm";
 import "./style/Conversation.scss";
 import sendDataToFirebase from "./FirebaseSender";
 
-const Conversation = ({ messages, handleInputFocus }) => {
+const Conversation = ({ messages, handleInputFocus, parsingUserData }) => {
   const messageEndRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -13,9 +13,16 @@ const Conversation = ({ messages, handleInputFocus }) => {
     messageEndRef.current.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  const handleUserData = (data) => {
+    parsingUserData(data);
+  };
+
   return (
-    <div className="App-main">
-      <UserDataForm handleInputFocus={handleInputFocus} />
+    <div className='App-main'>
+      <UserDataForm
+        handleInputFocus={handleInputFocus}
+        handleUserData={handleUserData}
+      />
       <MessageList
         messages={messages}
         render={(message, index) => {
@@ -23,7 +30,7 @@ const Conversation = ({ messages, handleInputFocus }) => {
             return (
               <div
                 key={index}
-                className="messages__content messages__content--user"
+                className='messages__content messages__content--user'
               >
                 {message.message}
               </div>
@@ -32,7 +39,7 @@ const Conversation = ({ messages, handleInputFocus }) => {
             return (
               <div
                 key={index}
-                className="messages__content messages__content--bot"
+                className='messages__content messages__content--bot'
               >
                 {message.message}
               </div>
@@ -58,6 +65,7 @@ const MessageList = ({ messages, render }) => {
 Conversation.propTypes = {
   messages: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleInputFocus: PropTypes.func.isRequired,
+  parsingUserData: PropTypes.func.isRequired,
 };
 
 MessageList.propTypes = {

@@ -8,7 +8,7 @@ import MyModal from "../Dialog";
 import { HiOutlineCheck } from "react-icons/hi";
 
 const UserDataForm = (props) => {
-  const { handleInputFocus } = props;
+  const { handleInputFocus, handleUserData } = props;
   let [isOpen, setIsOpen] = React.useState(false);
 
   function closeModal() {
@@ -29,6 +29,7 @@ const UserDataForm = (props) => {
     };
     localStorage.setItem("User Data Form", JSON.stringify(userData));
     openModal();
+    handleUserData(userData);
   };
 
   const storedData = JSON.parse(localStorage.getItem("User Data Form"));
@@ -48,30 +49,30 @@ const UserDataForm = (props) => {
 
   return (
     <>
-      <div className="mx-auto my-5 w-full max-w-xs rounded-2xl bg-[#f1f7fe]">
+      <div className='mx-auto my-5 w-full max-w-xs rounded-2xl bg-[#f1f7fe]'>
         <form
-          className="relative flex flex-col gap-4 px-6 pb-6 pt-8 text-center"
+          className='relative flex flex-col gap-4 px-6 pb-6 pt-8 text-center'
           onSubmit={(e) => {
             e.preventDefault();
             handleSubmit(e);
           }}
         >
-          <span className="text-sm">
+          <span className='text-sm'>
             Kami mengingatkan Anda bahwa percakapan ini direkam dan akan
             digunakan untuk tujuan pengawasan dan peningkatan layanan.
           </span>
-          <div className="mx-0 mb-2 mt-4 w-full space-y-1 rounded-lg bg-transparent">
+          <div className='mx-0 mb-2 mt-4 w-full space-y-1 rounded-lg bg-transparent'>
             <input
-              type="text"
-              disabled={values.isSubmit}
-              name="name"
+              type='text'
+              disabled={storedData ? true : false}
+              name='name'
               value={values.name}
               className={
                 errors.name
                   ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
                   : "h-10 w-full bg-white p-3 text-sm outline-none"
               }
-              placeholder="Nama Lengkap"
+              placeholder='Nama Lengkap'
               onChange={handleChange}
               onFocus={() => handleInputFocus(true)}
               onBlur={() => {
@@ -81,21 +82,21 @@ const UserDataForm = (props) => {
               required
             />
             {errors.name && (
-              <p className="ml-3 text-right text-xs font-medium text-red-500">
+              <p className='ml-3 text-right text-xs font-medium text-red-500'>
                 {errors.name}
               </p>
             )}
             <input
-              type="email"
-              disabled={values.isSubmit}
-              name="email"
+              type='email'
+              disabled={storedData ? true : false}
+              name='email'
               value={values.email}
               className={
                 errors.email
                   ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
                   : "h-10 w-full bg-white p-3 text-sm outline-none"
               }
-              placeholder="Email"
+              placeholder='Email'
               onChange={handleChange}
               onFocus={() => handleInputFocus(true)}
               onBlur={() => {
@@ -105,21 +106,21 @@ const UserDataForm = (props) => {
               required
             />
             {errors.email && (
-              <p className="ml-3 text-right text-xs font-medium text-red-500">
+              <p className='ml-3 text-right text-xs font-medium text-red-500'>
                 {errors.email}
               </p>
             )}
             <input
-              type="tel"
-              disabled={values.isSubmit}
-              name="phoneNumber"
+              type='tel'
+              disabled={storedData ? true : false}
+              name='phoneNumber'
               value={values.phoneNumber}
               className={
                 errors.phoneNumber
                   ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
                   : "h-10 w-full bg-white p-3 text-sm outline-none"
               }
-              placeholder="Nomor Telepon"
+              placeholder='Nomor Telepon'
               onChange={handleChange}
               onFocus={() => handleInputFocus(true)}
               onBlur={() => {
@@ -129,20 +130,20 @@ const UserDataForm = (props) => {
               required
             />
             {errors.phoneNumber && (
-              <p className="ml-3 text-right text-xs text-red-500">
+              <p className='ml-3 text-right text-xs text-red-500'>
                 {errors.phoneNumber}
               </p>
             )}
           </div>
           {storedData ? (
-            <span className="text-sm">
+            <span className='text-sm'>
               Terima kasih telah mengirimkan formulir. Formulir akan membantu
               kami memahami kebutuhan Anda dan memberikan layanan yang lebih
               baik.
             </span>
           ) : (
             <button
-              type="submit"
+              type='submit'
               disabled={values.isSubmit}
               className={clsx(
                 "rounded-3xl border-0 px-4 py-2.5 ",
@@ -159,13 +160,13 @@ const UserDataForm = (props) => {
       <MyModal
         isOpen={isOpen}
         closeModal={closeModal}
-        dialogTitle="Selamat!"
-        dialogDesc="Formulir Anda telah berhasil dikirim. Terima kasih telah meluangkan waktu untuk mengisi formulir."
-        dialogButton="Hurray"
-        bgColor="bg-green-100"
-        buttonColor="bg-[#0e74bd]"
+        dialogTitle='Selamat!'
+        dialogDesc='Formulir Anda telah berhasil dikirim. Terima kasih telah meluangkan waktu untuk mengisi formulir.'
+        dialogButton='Hurray'
+        bgColor='bg-green-100'
+        buttonColor='bg-[#0e74bd]'
         icon={HiOutlineCheck}
-        iconColor="green"
+        iconColor='green'
       />
     </>
   );
@@ -173,6 +174,7 @@ const UserDataForm = (props) => {
 
 UserDataForm.propTypes = {
   handleInputFocus: PropTypes.func.isRequired,
+  handleUserData: PropTypes.func.isRequired,
 };
 
 export default UserDataForm;

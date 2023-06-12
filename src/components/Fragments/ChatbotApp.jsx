@@ -29,6 +29,11 @@ const ChatbotApp = () => {
     setIsInputFocused(isFocused);
   };
 
+  const [userDataStore, setUserDataStore] = React.useState(null);
+  const parsingUserData = (data) => {
+    setUserDataStore(data);
+  };
+
   return (
     <>
       <div
@@ -47,8 +52,13 @@ const ChatbotApp = () => {
           isTyping={isTyping}
           isInputFocused={isInputFocused}
         />
-        <Conversation messages={messages} handleInputFocus={handleInputFocus} />
+        <Conversation
+          messages={messages}
+          handleInputFocus={handleInputFocus}
+          parsingUserData={parsingUserData}
+        />
         <InputPrompt
+          userDataStore={userDataStore}
           handleInputFocus={handleInputFocus}
           handleSetMessages={handleSetMessages}
         />
