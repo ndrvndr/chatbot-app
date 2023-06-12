@@ -16,7 +16,8 @@ const Input = ({ handleInputFocus, handleSetMessages, userDataStore }) => {
     setUserInput(event.target.value);
   };
 
-  const userData = userDataStore;
+  const userData =
+    userDataStore || JSON.parse(localStorage.getItem("User Data Form"));
 
   let [isOpen, setIsOpen] = React.useState(false);
 
