@@ -40,9 +40,8 @@ const Conversation = ({ messages, handleInputFocus, parsingUserData }) => {
               <div
                 key={index}
                 className='messages__content messages__content--bot'
-              >
-                {message.message}
-              </div>
+                dangerouslySetInnerHTML={{ __html: message.message }}
+              />
             );
           }
         }}
