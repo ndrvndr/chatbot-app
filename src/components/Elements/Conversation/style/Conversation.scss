@@ -21,7 +21,7 @@ $font-family_1: inherit;
 .messages__content {
   border-radius: 20px 20px 0px 0px;
   width: fit-content;
-  max-width: 70%;
+  max-width: 100%;
   padding: 10px;
   background: $color_1;
   line-height: 1.5rem;
@@ -47,14 +47,46 @@ $font-family_1: inherit;
   text-align: left;
   border-bottom-right-radius: 20px;
   margin-bottom: 20px;
+
   p {
     background: #0e74bd;
   }
+
   a {
     text-decoration: underline;
     font-weight: 700;
   }
+
   b {
     font-weight: 700;
+  }
+
+  table {
+    thead {
+      tr {
+        border: 1px solid #0e74bd;
+        th {
+          width: 100%;
+          padding-bottom: 8px;
+          background-color: #0e74bd;
+          color: #fff;
+          border: 1px solid #0e74bd;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        background-color: #f1f7fe;
+        color: #0e74bd;
+        border: 1px solid #064a7a;
+
+        td {
+          border: 1px solid #064a7a;
+          padding: 8px;
+          text-align: center;
+        }
+      }
+    }
   }
 }
