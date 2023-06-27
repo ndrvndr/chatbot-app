@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import { RiCloseLine } from "react-icons/ri";
+import { MdCloseFullscreen } from "react-icons/md";
 
 const CloseButton = ({ toggleContent }) => {
   return (
@@ -8,7 +8,7 @@ const CloseButton = ({ toggleContent }) => {
       className='ml-[70px] cursor-pointer min-[449px]:hidden'
       onClick={() => toggleContent()}
     >
-      <RiCloseLine color='#fff' fontSize='2.6em' />
+      <MdCloseFullscreen color='#fff' fontSize='2em' />
     </div>
   );
 };

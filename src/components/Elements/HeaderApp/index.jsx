@@ -5,7 +5,7 @@ import UversTeam from "./UversTeam";
 import OnlineStatus from "./OnlineStatus";
 import TypingStatus from "./TypingStatus";
 import CloseButton from "./CloseButton";
-import { FcCustomerSupport } from "react-icons/fc";
+import { FcOnlineSupport } from "react-icons/fc";
 
 const HeaderApp = ({ toggleContent, isTyping, isInputFocused }) => {
   return (
@@ -19,7 +19,7 @@ const HeaderApp = ({ toggleContent, isTyping, isInputFocused }) => {
     >
       <div className='flex min-[449px]:ml-[40px]'>
         <div className='my-auto mr-5 rounded-[100%] border-[none] bg-[#0e74bd] '>
-          <FcCustomerSupport fontSize='2.7em' />
+          <FcOnlineSupport fontSize='2.7em' />
         </div>
 
         <div className='flex w-[132px] flex-col text-white'>
