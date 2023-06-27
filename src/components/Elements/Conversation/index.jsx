@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import UserDataForm from "./UserDataForm";
 import "./style/Conversation.scss";
 import sendDataToFirebase from "./FirebaseSender";
+import DisclosureGuide from "../Disclosure";
 
 const Conversation = ({ messages, handleInputFocus, parsingUserData }) => {
   const messageEndRef = React.useRef(null);
@@ -23,6 +24,7 @@ const Conversation = ({ messages, handleInputFocus, parsingUserData }) => {
         handleInputFocus={handleInputFocus}
         handleUserData={handleUserData}
       />
+      <DisclosureGuide />
       <MessageList
         messages={messages}
         render={(message, index) => {

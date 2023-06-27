@@ -49,7 +49,7 @@ const UserDataForm = (props) => {
 
   return (
     <>
-      <div className='mx-auto my-5 w-full max-w-xs rounded-2xl bg-[#f1f7fe]'>
+      <div className='mx-auto mb-3 w-full max-w-xs rounded-2xl bg-[#F3E8FF]'>
         <form
           className='relative flex flex-col gap-4 px-6 pb-6 pt-8 text-center'
           onSubmit={(e) => {
@@ -69,8 +69,8 @@ const UserDataForm = (props) => {
               value={values.name}
               className={
                 errors.name
-                  ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
-                  : "h-10 w-full bg-white p-3 text-sm outline-none"
+                  ? "h-10 w-full rounded-md border border-red-600 p-3 text-sm outline-none"
+                  : "h-10 w-full rounded-md bg-white p-3 text-sm outline-none"
               }
               placeholder='Nama Lengkap'
               onChange={handleChange}
@@ -93,8 +93,8 @@ const UserDataForm = (props) => {
               value={values.email}
               className={
                 errors.email
-                  ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
-                  : "h-10 w-full bg-white p-3 text-sm outline-none"
+                  ? "h-10 w-full rounded-md border border-red-600 p-3 text-sm outline-none"
+                  : "h-10 w-full rounded-md bg-white p-3 text-sm outline-none"
               }
               placeholder='Email'
               onChange={handleChange}
@@ -117,8 +117,8 @@ const UserDataForm = (props) => {
               value={values.phoneNumber}
               className={
                 errors.phoneNumber
-                  ? "h-10 w-full border border-red-600 p-3 text-sm outline-none"
-                  : "h-10 w-full bg-white p-3 text-sm outline-none"
+                  ? "h-10 w-full rounded-md border border-red-600 p-3 text-sm outline-none"
+                  : "h-10 w-full rounded-md bg-white p-3 text-sm outline-none"
               }
               placeholder='Nomor Telepon'
               onChange={handleChange}
