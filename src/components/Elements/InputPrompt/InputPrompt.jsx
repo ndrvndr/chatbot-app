@@ -12,9 +12,9 @@ const InputPrompt = (props) => {
   return (
     <>
       <input
-        className="border-[none] text-sm outline-none"
-        type="text"
-        placeholder="Tulis pesan Anda..."
+        className='border-[none] text-sm outline-none'
+        type='text'
+        placeholder='Ketik pertanyaan Kamu...'
         onClick={handleInputClick}
         onFocus={() => {
           if (userData !== null) {
