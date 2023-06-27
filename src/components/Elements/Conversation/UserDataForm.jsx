@@ -49,7 +49,7 @@ const UserDataForm = (props) => {
 
   return (
     <>
-      <div className='mx-auto mb-3 w-full max-w-xs rounded-2xl bg-[#F3E8FF]'>
+      <div className='mx-auto mb-5 w-full max-w-xs rounded-2xl bg-[#F3E8FF]'>
         <form
           className='relative flex flex-col gap-4 px-6 pb-6 pt-8 text-center'
           onSubmit={(e) => {
