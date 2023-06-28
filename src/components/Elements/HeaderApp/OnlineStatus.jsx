@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import * as React from "react";
 
-import { HiStatusOnline, HiStatusOffline } from "react-icons/hi";
+import { HiStatusOnline } from "react-icons/hi";
+import { TbCloudOff } from "react-icons/tb";
 
 const OnlineStatus = ({ isInputFocused }) => {
   const [isOnline, setIsOnline] = React.useState(navigator.onLine);
@@ -57,7 +58,7 @@ const OnlineStatus = ({ isInputFocused }) => {
       {isOnline ? (
         <HiStatusOnline color='#4ECE3D' />
       ) : (
-        <HiStatusOffline color='#fff' />
+        <TbCloudOff color='#fff' />
       )}
       <span className='ml-1 text-sm'>
         {isOnline ? "Terhubung" : "Tidak Terhubung"}

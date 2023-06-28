@@ -1,5 +1,5 @@
 const UversTeam = () => {
-  return <span className="font-bold">Uvers Team</span>;
+  return <span className='font-bold'>UVERS BOT</span>;
 };
 
 export default UversTeam;
