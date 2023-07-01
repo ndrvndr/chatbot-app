@@ -22,6 +22,15 @@ export default function DisclosureGuide() {
                   <li>Persyaratan masuk yang perlu disiapkan apa saja?</li>
                   <li>Biaya kuliah di UVERS berapa?</li>
                 </ul>
+                <br />
+                <span className='font-bold'>
+                  Atau bisa menggunakan kata kunci:
+                </span>
+                <ul className='list-disc'>
+                  <li>Beasiswa UVERS</li>
+                  <li>Persyaratan Masuk</li>
+                  <li>Biaya kuliah</li>
+                </ul>
               </Disclosure.Panel>
             </>
           )}
@@ -63,7 +72,7 @@ export default function DisclosureGuide() {
               </Disclosure.Button>
               <Disclosure.Panel className='px-4 pb-2 pt-4 text-sm text-gray-500'>
                 <ul className='list-disc'>
-                  <li>Percakapan menggunakan Bahasa Indonesia baku</li>
+                  <li>Percakapan menggunakan Bahasa Indonesia yang baku</li>
                   <li>Tidak menggunakan singkatan-singkatan</li>
                   <li>Terkadang menghasilkan informasi yang salah</li>
                   <li>
