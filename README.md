@@ -73,6 +73,8 @@ Send button and forms use components from [uiverse.io](https://uiverse.io/) | [S
 
 Dialog components created using [headlessui.com](https://headlessui.com/react/dialog) and design inspired by [Aether Design System](https://aether.thcl.dev/). See the repository [here](https://github.com/theodorusclarence/aether-design-system)
 
+Disclosure components created using [headlessui.com](https://headlessui.com/react/disclosure)
+
 ## Authors
 
 - [@ndrvndr](https://github.com/ndrvndr)
