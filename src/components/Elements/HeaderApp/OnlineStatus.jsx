@@ -60,7 +60,7 @@ const OnlineStatus = ({ isInputFocused }) => {
       ) : (
         <TbCloudOff color='#fff' />
       )}
-      <span className='ml-1 text-sm'>
+      <span className='ml-1 text-sm font-medium'>
         {isOnline ? "Terhubung" : "Tidak Terhubung"}
       </span>
     </div>
