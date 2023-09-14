@@ -4,7 +4,7 @@ The project aims to create a standalone frontend chatbot app and connect it to a
 
 ## Demo
 
-The live site can be accessed [here]()
+The live site can be accessed [here](https://chatbot-app.pages.dev/)
 
 ## Run Locally
 
